@@ -1,7 +1,14 @@
-import { HttpClient } from '@angular/common/http';
+// Angular modules
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
+// Interfaces
 import TodoResponse from '../../models/response/todo-response';
+
+// Services
+import { HttpClient } from '@angular/common/http';
+
+// Environment
 import { environment } from '../../environments/environment';
 
 @Injectable({

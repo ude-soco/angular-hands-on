@@ -1,5 +1,7 @@
+// Angular modules
 import { NgModule } from '@angular/core';
 
+// Ant design modules
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzDividerModule } from 'ng-zorro-antd/divider';

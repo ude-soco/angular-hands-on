@@ -1,3 +1,4 @@
+// Interfaces
 import ITodo from './todo';
 
 export default interface IUser {

@@ -4,8 +4,12 @@ import { CommonModule } from '@angular/common';
 
 // Custom modules
 import { SharedAntDesignModule } from '../../module/shared-ant-design/shared-ant-design.module';
-import { UserService } from '../../services/user-service/user.service';
+
+// Interfaces
 import IUser from '../../models/user';
+
+// Services
+import { UserService } from '../../services/user-service/user.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,6 +21,7 @@ import { Router } from '@angular/router';
 })
 export class UserListComponent implements OnInit {
   users: Array<IUser> = [];
+  
   userService = inject(UserService);
   router = inject(Router);
 

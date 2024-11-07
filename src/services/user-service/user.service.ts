@@ -1,10 +1,17 @@
-import { HttpClient } from '@angular/common/http';
+// Angular modules
 import { Injectable, inject } from '@angular/core';
-import { TodoService } from '../todo-service/todo.service';
 import { forkJoin, map, Observable, switchMap } from 'rxjs';
+
+// Interfaces
 import IUser from '../../models/user';
 import UserResponse from '../../models/response/user-response';
 import TodoResponse from '../../models/response/todo-response';
+
+// Services
+import { HttpClient } from '@angular/common/http';
+import { TodoService } from '../todo-service/todo.service';
+
+// Environment
 import { environment } from '../../environments/environment';
 
 @Injectable({
