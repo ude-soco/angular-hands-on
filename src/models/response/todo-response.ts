@@ -1,4 +1,4 @@
-export default interface IUserTodo {
+export default interface TodoResponse {
   userId: number;
   id: number;
   title: string;

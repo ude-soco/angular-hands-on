@@ -1,6 +1,14 @@
 <nz-content>
   <div class="container">
     <div nz-row nzJustify="center">
+      <div nz-col nzSpan="24" class="grid">
+        <button nz-button (click)="goBack()">
+          <span nz-icon nzType="arrow-left" nzTheme="outline"></span>
+          Go back
+        </button>
+      </div>
+    </div>
+    <div nz-row nzJustify="center">
       <div
         nz-col
         nzXs="24"
@@ -35,7 +43,7 @@
 
             <app-todo-card
               *ngFor="let item of todos"
-              [todo]="item.task"
+              [todoTitle]="item.title"
               [todoId]="item.id"
               (onDeleteTodo)="handleDeleteTodo($event)"
             />

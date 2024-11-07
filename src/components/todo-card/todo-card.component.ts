@@ -13,7 +13,7 @@ import { SharedAntDesignModule } from '../../module/shared-ant-design/shared-ant
   styleUrl: './todo-card.component.css',
 })
 export default class TodoCardComponent {
-  @Input() todo: string = '';
+  @Input() todoTitle: string = '';
   @Input() todoId: number = 0;
 
   @Output() onDeleteTodo: EventEmitter<number> = new EventEmitter();
