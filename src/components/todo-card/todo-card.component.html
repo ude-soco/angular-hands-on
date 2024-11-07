@@ -1,0 +1,16 @@
+<div nz-row nzJustify="space-between" nzAlign="middle" class="todo-card">
+  <div nz-col>
+    <p nz-typography>{{ todo }}</p>
+  </div>
+  <div nz-col>
+    <button
+      nz-button
+      nzType="primary"
+      nzDanger
+      nzShape="circle"
+      (click)="onDeleteTodo.emit(todoId)"
+    >
+      <span nz-icon nzType="delete" nzTheme="outline"></span>
+    </button>
+  </div>
+</div>

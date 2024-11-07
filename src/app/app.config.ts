@@ -10,7 +10,6 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { en_US, provideNzI18n } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 
 registerLocaleData(en);
@@ -21,7 +20,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideAnimationsAsync(),
     provideNzI18n(en_US),
-    importProvidersFrom(FormsModule),
     provideAnimationsAsync(),
     provideHttpClient(),
   ],
