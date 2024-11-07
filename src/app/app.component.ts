@@ -51,7 +51,7 @@ export class AppComponent {
 
   // * Task 4: Starts here
 
-  // * Task 4: Continues to app.component.html (A)
+  // * Task 4: Ends here
 
   // * Task 7: Starts here
 
