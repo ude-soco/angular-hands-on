@@ -33,7 +33,7 @@ Download and install the following software:
 
 - Switch between branches to view the different topics. Type `git checkout <branch_name>` in the terminal to switch between the branches. Remember to replace `<branch_name>` with the actual branch name, e.g.,
   ```bash
-  git checkout 1-angular-1-hands-on-template
+  git checkout 3-angular-2-hands-on-template
   ```
 - Open a terminal and install Angular CLI (if not installed)
   ```bash
