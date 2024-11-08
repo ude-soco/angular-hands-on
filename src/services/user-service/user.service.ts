@@ -18,7 +18,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root',
 })
 export class UserService {
-  users: Array<IUser> = [];
+  private users: Array<IUser> = [];
 
   http = inject(HttpClient);
   todoService = inject(TodoService);
@@ -38,7 +38,6 @@ export class UserService {
                 todos: todos.map((todo: TodoResponse) => ({
                   id: todo.id,
                   title: todo.title,
-                  completed: todo.completed,
                 })),
               }))
             );

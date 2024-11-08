@@ -21,20 +21,29 @@ import { Router } from '@angular/router';
 })
 export class UserListComponent implements OnInit {
   users: Array<IUser> = [];
-  
+
+  // * Task 2: Starts here
   userService = inject(UserService);
+  // * Task 2: Continues below (A)
   router = inject(Router);
 
   ngOnInit(): void {
-    let userList = this.userService.getUsers();
-    if (userList.length === 0) {
-      this.userService.fetchUsers().subscribe((res) => {
-        this.users = res;
-        this.userService.setUsers(res);
-      });
-    } else {
+    // * Task 2: Continues from here (A)
+    let userList: Array<IUser> = this.userService.getUsers();
+    if (userList.length) {
       this.users = userList;
+    } else {
+      this.userService.fetchUsers().subscribe({
+        next: (res: Array<IUser>) => {
+          this.users = res;
+          this.userService.setUsers(res);
+        },
+        error: (err) => {
+          console.error('Error fetching users:', err);
+        },
+      });
     }
+    // * Task 2: Ends here
   }
 
   onNavigateToUserTodo(routerName: string) {

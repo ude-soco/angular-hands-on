@@ -13,6 +13,9 @@ import { SharedAntDesignModule } from '../../module/shared-ant-design/shared-ant
   styleUrl: './add-todo.component.css',
 })
 export default class AddTodoComponent {
+  // * Task 3: Starts here
   @Input() todoText: string = '';
+
   @Output() onAddTodo: EventEmitter<string> = new EventEmitter();
+  // * Task 3: Continues to add-todo.component.html (A)
 }

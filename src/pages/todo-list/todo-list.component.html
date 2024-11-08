@@ -9,14 +9,7 @@
       </div>
     </div>
     <div nz-row nzJustify="center">
-      <div
-        nz-col
-        nzXs="24"
-        nzSm="18"
-        nzMd="14"
-        nzLg="10"
-        class="grid-container"
-      >
+      <div nz-col nzSpan="24" class="grid-container">
         <div nz-row nzJustify="center">
           <h1 nz-typography>A Simple Todo List</h1>
         </div>
@@ -25,10 +18,12 @@
         </div>
         <div nz-row [nzGutter]="[16, 16]">
           <div nz-col nzSpan="24">
+            <!-- * Task 4: Continues from todo-list.component.ts (A) -->
             <app-add-todo
               [todoText]="addTodoText"
               (onAddTodo)="handleAddTodo($event)"
             />
+            <!-- * Task 4: Ends here -->
           </div>
 
           <div nz-col nzSpan="24">
@@ -41,12 +36,14 @@
               </ng-template>
             </div>
 
+            <!-- * Task 6: Continues from todo-list.component.ts (A) -->
             <app-todo-card
               *ngFor="let item of todos"
-              [todoTitle]="item.title"
               [todoId]="item.id"
+              [todoTitle]="item.title"
               (onDeleteTodo)="handleDeleteTodo($event)"
             />
+            <!-- * Task 6: Ends here -->
           </div>
         </div>
       </div>

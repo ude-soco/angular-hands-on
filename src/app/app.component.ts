@@ -6,7 +6,6 @@ import { SharedAntDesignModule } from '../module/shared-ant-design/shared-ant-de
 
 // Components
 import { NavigationBarComponent } from '../components/navigation-bar/navigation-bar.component';
-import { TodoListComponent } from '../pages/todo-list/todo-list.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 
@@ -14,10 +13,11 @@ import { RouterModule } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [
+    // * Task 1: Continues from app.routes.ts (A)
     RouterModule,
+    // * Task 1: Continues to app.component.html (B)
     SharedAntDesignModule,
     NavigationBarComponent,
-    TodoListComponent,
     FooterComponent,
   ],
   templateUrl: './app.component.html',
